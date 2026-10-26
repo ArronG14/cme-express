@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#071e3c">
+<meta name="description" content="C.M.E. Express Tours — comfortable Jamaican transfers and excursions. Explore. Experience. Memories that last.">
+<title>C.M.E. Express Tours | Your Journey, Our Priority</title>
+<style>
+:root{
+  --navy:#071e3c;
+  --navy-2:#0d3157;
+  --green:#119548;
+  --green-2:#1fbb5c;
+  --sun:#ffc928;
+  --sun-2:#ffb100;
+  --cream:#f8fcff;
+  --sand:#fbf0db;
+  --text:#0c2036;
+  --muted:#567089;
+  --line:rgba(7,30,60,.10);
+  --shadow:0 18px 55px rgba(7,30,60,.18);
+  --radius:26px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;color:var(--text);background:linear-gradient(180deg,#dff7ff 0%,#ffffff 14%,#fffef8 100%)}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{width:min(1180px, calc(100% - 28px));margin:0 auto}
+.section{padding:74px 0}
+.chip{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;background:rgba(255,255,255,.18);color:#fff;font-weight:900;letter-spacing:.10em;text-transform:uppercase;font-size:.74rem;border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px)}
+.chip i{width:9px;height:9px;border-radius:50%;background:var(--sun);display:inline-block;box-shadow:0 0 0 6px rgba(255,201,40,.16)}
+.paint{display:inline-block;background:linear-gradient(90deg,var(--sun),#ffe083);padding:10px 16px;border-radius:999px;font-weight:900;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--navy);box-shadow:0 12px 28px rgba(255,201,40,.3)}
+.section-title{margin:0 0 10px;font-size:clamp(2rem,4vw,3.4rem);line-height:1.02;color:var(--navy);font-weight:1000}
+.section-lead{margin:0;color:var(--muted);font-size:1.05rem;max-width:760px;line-height:1.7}
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.90);backdrop-filter:blur(16px);border-bottom:1px solid rgba(7,30,60,.08)}
+.navbar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:84px}
+.brand img{width:170px;max-width:42vw;height:auto}
+.navlinks{display:flex;align-items:center;gap:24px}
+.navlinks a{font-size:.92rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:var(--navy)}
+.navlinks a:hover{color:var(--green)}
+.navcta{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:999px;background:var(--green);color:#fff;font-weight:900;box-shadow:0 14px 28px rgba(17,149,72,.26)}
+.burger{display:none;border:0;background:var(--navy);color:#fff;padding:12px 14px;border-radius:14px;font-weight:900}
+.hero{position:relative;overflow:hidden;background:
+ linear-gradient(130deg, rgba(7,30,60,.96) 0%, rgba(7,30,60,.88) 36%, rgba(7,30,60,.66) 60%, rgba(7,30,60,.48) 100%),
+ radial-gradient(circle at 22% 18%, rgba(255,201,40,.34) 0, rgba(255,201,40,.0) 25%),
+ linear-gradient(180deg,#0fa8e8 0%, #0a5f95 100%);color:#fff}
+.hero::before{content:"";position:absolute;inset:auto auto -120px -120px;width:360px;height:360px;background:radial-gradient(circle at center, rgba(255,201,40,.95) 0, rgba(255,177,0,.9) 44%, rgba(255,177,0,0) 72%);filter:blur(4px);border-radius:50%;opacity:.88}
+.hero::after{content:"";position:absolute;inset:0;background:
+ radial-gradient(circle at 78% 16%, rgba(255,255,255,.16) 0, transparent 18%),
+ radial-gradient(circle at 78% 22%, rgba(255,255,255,.08) 0, transparent 30%),
+ linear-gradient(transparent 0, rgba(255,255,255,.02) 100%);pointer-events:none}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center;padding:68px 0 42px}
+.hero-copy h1{margin:16px 0 18px;font-size:clamp(2.8rem,6vw,5.6rem);line-height:.95;letter-spacing:-.04em;font-weight:1000;max-width:10ch}
+.hero-copy h1 .accent{color:var(--sun)}
+.hero-copy p{margin:0 0 24px;color:rgba(255,255,255,.85);font-size:1.1rem;line-height:1.8;max-width:57ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin:26px 0 28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 22px;border-radius:999px;font-weight:900;transition:.22s ease;box-shadow:var(--shadow)}
+.btn.primary{background:var(--sun);color:var(--navy)}
+.btn.secondary{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);color:#fff;backdrop-filter:blur(8px);box-shadow:none}
+.btn:hover{transform:translateY(-2px)}
+.hero-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:560px}
+.fact{padding:16px 14px;border-radius:20px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.15)}
+.fact strong{display:block;font-size:1.1rem}
+.fact span{display:block;margin-top:6px;color:rgba(255,255,255,.74);font-size:.9rem;line-height:1.5}
+.hero-visual{position:relative}
+.poster-card{position:relative;padding:28px 22px 0;border-radius:34px;background:linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.16);box-shadow:0 30px 70px rgba(0,0,0,.24);overflow:hidden}
+.poster-card .van{width:min(100%,680px);margin:0 auto;filter:drop-shadow(0 26px 36px rgba(0,0,0,.34))}
+.driver-note{position:absolute;left:22px;top:20px;max-width:240px;padding:14px 16px;background:rgba(255,255,255,.94);color:var(--navy);border-radius:20px;box-shadow:0 16px 36px rgba(0,0,0,.16)}
+.driver-note strong{display:block;font-size:.9rem;text-transform:uppercase;letter-spacing:.1em;color:var(--green)}
+.driver-note span{display:block;margin-top:8px;font-weight:800;line-height:1.45}
+.mini-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:16px;padding:0 0 22px}
+.mini-card{padding:16px;border-radius:22px;background:#fff;color:var(--navy);box-shadow:0 14px 28px rgba(7,30,60,.12)}
+.mini-card strong{display:block;font-size:1rem}
+.mini-card span{display:block;margin-top:6px;font-size:.92rem;color:var(--muted);line-height:1.55}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.service{padding:26px;border-radius:26px;background:#fff;box-shadow:var(--shadow);border:1px solid var(--line)}
+.service .icon{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:1.45rem;background:linear-gradient(135deg,var(--sun),#ffe184);margin-bottom:16px;color:var(--navy);font-weight:900}
+.service h3{margin:0 0 10px;font-size:1.22rem;color:var(--navy)}
+.service p{margin:0;color:var(--muted);line-height:1.7}
+.story{display:grid;grid-template-columns:.92fr 1.08fr;gap:28px;align-items:center}
+.story-card{padding:34px;border-radius:30px;background:linear-gradient(180deg,#fff,#f7fbff);box-shadow:var(--shadow);border:1px solid var(--line)}
+.story-list{display:grid;gap:16px;margin-top:22px}
+.story-item{display:flex;gap:14px;align-items:flex-start}
+.story-item i{flex:0 0 auto;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(17,149,72,.12);color:var(--green);font-style:normal;font-weight:900}
+.story-item p{margin:0;color:var(--muted);line-height:1.65}
+.story-photo{border-radius:30px;overflow:hidden;box-shadow:var(--shadow);min-height:420px;background:linear-gradient(180deg,rgba(7,30,60,.05),rgba(7,30,60,.05))}
+.story-photo img{width:100%;height:100%;object-fit:cover}
+.destinations-header{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:18px;margin-bottom:28px}
+.destinations-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.trip{position:relative;overflow:hidden;border-radius:30px;min-height:360px;background:#10375c;box-shadow:var(--shadow)}
+.trip img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.02)}
+.trip::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(7,30,60,.08) 0%, rgba(7,30,60,.12) 35%, rgba(7,30,60,.88) 100%)}
+.trip-content{position:absolute;inset:auto 0 0 0;z-index:1;padding:28px}
+.trip-tag{display:inline-flex;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.18);color:#fff;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:900;border:1px solid rgba(255,255,255,.22)}
+.trip h3{margin:14px 0 10px;font-size:2rem;line-height:1;color:#fff}
+.trip p{margin:0;color:rgba(255,255,255,.85);line-height:1.7;max-width:32ch}
+.trip a{display:inline-flex;align-items:center;gap:8px;margin-top:16px;color:var(--sun);font-weight:900;text-transform:uppercase;letter-spacing:.08em;font-size:.9rem}
+.cta-band{background:linear-gradient(135deg,var(--navy),#0c2f56);color:#fff;overflow:hidden;position:relative}
+.cta-band::before{content:"";position:absolute;right:-40px;top:-40px;width:220px;height:220px;background:radial-gradient(circle, rgba(255,201,40,.45) 0, rgba(255,201,40,0) 72%);border-radius:50%}
+.cta-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+.contact-card{padding:28px;border-radius:30px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(8px)}
+.contact-list{display:grid;gap:14px;margin-top:20px}
+.contact-item{display:flex;gap:14px;align-items:flex-start}
+.contact-badge{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.14);font-weight:900}
+.contact-item strong{display:block;font-size:1rem}
+.contact-item span,.contact-item a{display:block;color:rgba(255,255,255,.8);line-height:1.5}
+footer{padding:28px 0 44px;background:#051325;color:#d6e6f7}
+.footer-wrap{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+.footer-logo img{width:140px}
+.footer-links{display:flex;flex-wrap:wrap;gap:16px 20px;font-size:.92rem;color:#b7c9dd}
+.whatsapp-float{position:fixed;right:16px;bottom:16px;z-index:70;display:inline-flex;align-items:center;gap:10px;padding:14px 18px;border-radius:999px;background:#0e9f47;color:#fff;font-weight:900;box-shadow:0 16px 36px rgba(14,159,71,.35)}
+.mobile-menu{display:none}
+@media (max-width: 1024px){
+  .hero-grid,.story,.cta-grid{grid-template-columns:1fr}
+  .destinations-grid{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr 1fr 1fr}
+}
+@media (max-width: 860px){
+  .navlinks{display:none;position:absolute;left:14px;right:14px;top:82px;background:#fff;border-radius:22px;padding:14px;border:1px solid var(--line);box-shadow:var(--shadow);flex-direction:column;align-items:flex-start}
+  .navlinks.open{display:flex}
+  .burger{display:inline-flex}
+  .navbar{min-height:78px}
+  .hero-copy h1{max-width:12ch}
+  .hero-facts{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+  .driver-note{position:static;margin-bottom:14px;max-width:none}
+}
+@media (max-width: 620px){
+  .section{padding:58px 0}
+  .wrap{width:min(100% - 22px, 1180px)}
+  .brand img{width:138px}
+  .section-title{font-size:clamp(1.9rem,9vw,2.6rem)}
+  .hero-grid{padding:42px 0 30px}
+  .hero-copy h1{font-size:clamp(2.35rem,11vw,3.6rem)}
+  .trip{min-height:330px}
+  .trip h3{font-size:1.72rem}
+  .poster-card{padding:18px 14px 0;border-radius:26px}
+  .story-card,.contact-card,.service{padding:22px}
+  .whatsapp-float{right:12px;left:12px;justify-content:center;bottom:12px}
+  body{padding-bottom:84px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap navbar">
+    <a class="brand" href="#top" aria-label="C.M.E. Express Tours home"><img src="assets/logo.webp" alt="C.M.E. Express Tours logo"></a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#contact">Contact</a>
+      <a class="navcta" href="https://wa.me/18765293967?text=Hi%20C.M.E.%20Express%20Tours,%20I%27d%20like%20to%20book%20a%20tour%20or%20transfer." target="_blank" rel="noopener">Book Your Journey</a>
+    </nav>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="navlinks">Menu</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="chip"><i></i> Explore • Experience • Memories that last</span>
+        <h1>Your Journey,<br><span class="accent">Our Priority!</span></h1>
+        <p>Airport pickup, private transfers and unforgettable island excursions. Discover the beauty of Jamaica with friendly local service. We take you there. You make the memories!</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="https://wa.me/18765293967?text=Hi%20C.M.E.%20Express%20Tours,%20I%27d%20like%20to%20book%20a%20tour%20or%20transfer." target="_blank" rel="noopener">Book Your Journey</a>
+          <a class="btn secondary" href="#destinations">Explore Jamaica</a>
+        </div>
+        <div class="hero-facts">
+          <div class="fact"><strong>Airport pickup</strong><span>Arrive with ease.</span></div>
+          <div class="fact"><strong>Friendly local drivers</strong><span>Friendly service and a warm Jamaican welcome.</span></div>
+          <div class="fact"><strong>Tours & excursions</strong><span>Discover the best of Jamaica and make memories that last.</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="poster-card">
+          <div class="driver-note"><strong>Travel in style</strong><span>Safe. Comfortable. Reliable.</span></div>
+          <img class="van" src="assets/van.webp" alt="C.M.E. Express Tours dark blue Toyota van">
+          <div class="mini-stats">
+            <div class="mini-card"><strong>Airport pickup & drop-off</strong><span>From the airport to your hotel, Airbnb or guest house.</span></div>
+            <div class="mini-card"><strong>Tours & excursions</strong><span>Explore, experience and make memories that last.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap story">
+      <div class="story-card">
+        <span class="paint">Explore. Experience. Memories that last.</span>
+        <h2 class="section-title">We Take You There. You Make the Memories.</h2>
+        <p class="section-lead">Your journey is our priority. Whether you’re arriving in Jamaica or heading out to discover the island, enjoy comfortable travel and friendly local service every step of the way.</p>
+        <div class="story-list">
+          <div class="story-item"><i>1</i><p><strong>Friendly local drivers.</strong> A warm welcome and helpful service from pickup to drop-off.</p></div>
+          <div class="story-item"><i>2</i><p><strong>Tours & excursions.</strong> Discover the best of Jamaica with local knowledge and beautiful places to explore.</p></div>
+          <div class="story-item"><i>3</i><p><strong>Safe & reliable.</strong> Travel comfortably in the C.M.E. van, whether it’s a short transfer or a full day of exploring.</p></div>
+        </div>
+      </div>
+      <div class="story-photo"><img src="assets/sevenmile.webp" alt="Beautiful Caribbean beach in Jamaica"></div>
+    </div>
+  </section>
+
+  <section class="section" id="services" style="padding-top:0">
+    <div class="wrap">
+      <span class="paint">Services</span>
+      <h2 class="section-title">Relax, We’ve Got You!</h2>
+      <p class="section-lead">Airport pickup, airport drop-off, private transfers and tours. Comfortable, reliable travel with your journey at the heart of everything we do.</p>
+      <div class="services-grid">
+        <article class="service"><div class="icon">✈</div><h3>Airport Pickup</h3><p>Arrive with ease. From the airport to your accommodation, we’ve got you covered.</p></article>
+        <article class="service"><div class="icon">⇄</div><h3>Private Transfers</h3><p>To your hotel, Airbnb or guest house. Comfortable transport, on time, every time.</p></article>
+        <article class="service"><div class="icon">☼</div><h3>Tours & Excursions</h3><p>Discover the best of Jamaica with friendly local service and memories that last.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="destinations">
+    <div class="wrap">
+      <div class="destinations-header">
+        <div>
+          <span class="paint">Top destinations</span>
+          <h2 class="section-title">Explore Beautiful Jamaica.</h2>
+          <p class="section-lead">Beautiful destinations. Unforgettable experiences. Choose where you want to go and enquire directly about your adventure.</p>
+        </div>
+      </div>
+      <div class="destinations-grid">
+        <article class="trip"><img src="assets/dunns.webp" alt="Dunn's River Falls in Jamaica"><div class="trip-content"><span class="trip-tag">Ocho Rios</span><h3>Dunn’s River Falls</h3><p>Experience cascading waterfalls, refreshing waters and an unforgettable adventure.</p><a href="https://wa.me/18765293967?text=Hi%20C.M.E.%20Express%20Tours,%20I%27m%20interested%20in%20Dunn%27s%20River%20Falls." target="_blank" rel="noopener">Enquire about this trip →</a></div></article><article class="trip"><img src="assets/bluehole.webp" alt="Blue Hole in Jamaica"><div class="trip-content"><span class="trip-tag">St Ann</span><h3>Blue Hole</h3><p>Experience crystal-blue waters and the beauty of Jamaica’s tropical surroundings.</p><a href="https://wa.me/18765293967?text=Hi%20C.M.E.%20Express%20Tours,%20I%27m%20interested%20in%20Blue%20Hole." target="_blank" rel="noopener">Enquire about this trip →</a></div></article><article class="trip"><img src="assets/rafting.webp" alt="Bamboo rafting in Jamaica"><div class="trip-content"><span class="trip-tag">River Experience</span><h3>Rafting</h3><p>Relax and enjoy a peaceful bamboo rafting experience surrounded by nature.</p><a href="https://wa.me/18765293967?text=Hi%20C.M.E.%20Express%20Tours,%20I%27m%20interested%20in%20Rafting." target="_blank" rel="noopener">Enquire about this trip →</a></div></article><article class="trip"><img src="assets/horseback.webp" alt="Horseback riding on a Jamaican beach"><div class="trip-content"><span class="trip-tag">Beach Ride</span><h3>Horseback Riding</h3><p>Enjoy a memorable horseback riding experience with stunning island views.</p><a href="https://wa.me/18765293967?text=Hi%20C.M.E.%20Express%20Tours,%20I%27m%20interested%20in%20Horseback%20Riding." target="_blank" rel="noopener">Enquire about this trip →</a></div></article><article class="trip"><img src="assets/ricks.webp" alt="Rick's Cafe sunset in Negril"><div class="trip-content"><span class="trip-tag">Negril</span><h3>Rick’s Café</h3><p>Beautiful sunsets, ocean views and an unforgettable Negril experience.</p><a href="https://wa.me/18765293967?text=Hi%20C.M.E.%20Express%20Tours,%20I%27m%20interested%20in%20Rick%27s%20Cafe." target="_blank" rel="noopener">Enquire about this trip →</a></div></article><article class="trip"><img src="assets/sevenmile.webp" alt="Seven Mile Beach in Negril"><div class="trip-content"><span class="trip-tag">Negril</span><h3>Seven Mile Beach</h3><p>Relax on beautiful white sand beside the clear blue Caribbean Sea.</p><a href="https://wa.me/18765293967?text=Hi%20C.M.E.%20Express%20Tours,%20I%27m%20interested%20in%20Seven%20Mile%20Beach." target="_blank" rel="noopener">Enquire about this trip →</a></div></article><article class="trip"><img src="assets/ysfalls.webp" alt="YS Falls in Jamaica"><div class="trip-content"><span class="trip-tag">St Elizabeth</span><h3>YS Falls</h3><p>Discover stunning waterfalls, natural pools and lush tropical beauty.</p><a href="https://wa.me/18765293967?text=Hi%20C.M.E.%20Express%20Tours,%20I%27m%20interested%20in%20YS%20Falls." target="_blank" rel="noopener">Enquire about this trip →</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-band" id="contact">
+    <div class="wrap cta-grid">
+      <div>
+        <span class="paint">Get in touch</span>
+        <h2 class="section-title" style="color:#fff">Book Your Adventure Today!</h2>
+        <p class="section-lead" style="color:rgba(255,255,255,.84)">Relax, we’ve got you! Contact C.M.E. Express Tours for airport pickup, transfers and excursions. Your journey, our priority.</p>
+        <div class="hero-actions" style="margin-top:26px">
+          <a class="btn primary" href="https://wa.me/18765293967?text=Hi%20C.M.E.%20Express%20Tours,%20I%27d%20like%20to%20book%20a%20tour%20or%20transfer." target="_blank" rel="noopener">Chat on WhatsApp</a>
+          <a class="btn secondary" href="tel:+18765293967">Call +1 (876) 529-3967</a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <span class="chip" style="background:rgba(255,255,255,.10)"><i></i> Contact details</span>
+        <div class="contact-list">
+          <div class="contact-item"><div class="contact-badge">☎</div><div><strong>Phone & WhatsApp</strong><a href="tel:+18765293967">+1 (876) 529-3967</a></div></div>
+          <div class="contact-item"><div class="contact-badge">◎</div><div><strong>Instagram</strong><a href="https://instagram.com/cme.express" target="_blank" rel="noopener">@cme.express</a></div></div>
+          <div class="contact-item"><div class="contact-badge">✉</div><div><strong>Email</strong><a href="mailto:cmeexpress.tours@gmail.com">cmeexpress.tours@gmail.com</a></div></div>
+          <div class="contact-item"><div class="contact-badge">✓</div><div><strong>Our services</strong><span>Airport pickup, airport drop-off, transfers, tours and excursions.</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-wrap">
+    <a class="footer-logo" href="#top"><img src="assets/logo.webp" alt="C.M.E. Express Tours logo"></a>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#contact">Contact</a>
+      <span>Explore. Experience. Memories that last.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/18765293967?text=Hi%20C.M.E.%20Express%20Tours,%20I%27d%20like%20to%20book%20a%20tour%20or%20transfer." target="_blank" rel="noopener">WhatsApp us</a>
+
+<script>
+const burger = document.getElementById('burger');
+const navlinks = document.getElementById('navlinks');
+if (burger && navlinks) {
+  burger.addEventListener('click', () => {
+    const open = navlinks.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navlinks.classList.remove('open')));
+}
+</script>
+</body>
+</html>
